@@ -24,7 +24,12 @@ const Navigation = ({
 	ancorClass = 'navigation__item__anchor',
 	spanClass = 'navigation__item__span',
 	noanchorClass = 'navigation__item--noanchor',
-}) => (
+}) => {
+
+
+
+	return (
+
 
 	<ul { ...( wrappingId && { id: wrappingId } ) } className={`${ wrappingClass } ${ levelClass }${ level }`}>
 		{
@@ -35,6 +40,7 @@ const Navigation = ({
 					const homepage = homepageName === '' ? Object.keys( nav )[ 0 ] : homepageName;
 					const page = nav[ pageID ];
 					const _displayItem = noParents && pageID.startsWith( startID ) || !noParents;
+
 
 					// We only pursue this element if it either
 					// starts with our startID or is the homepage if we got noParents = true
@@ -96,11 +102,12 @@ const Navigation = ({
 			})
 		}
 	</ul>
-);
+)};
 
 
 const NavigationItem = ({ itemClass, ancorClass, spanClass, href, title, thisPage }) => {
-	if( thisPage ) {
+
+	if ( thisPage ) {
 		return <span className={ spanClass }>{ title }</span>;
 	}
 	else {
