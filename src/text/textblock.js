@@ -45,6 +45,11 @@ Textblock.propTypes = {
 	title: PropTypes.string,
 
 	/**
+	 * stackPosition: top
+	 */
+	stackPosition: PropTypes.string,
+
+	/**
 	 * level: 2
 	 */
 	level: PropTypes.number,
